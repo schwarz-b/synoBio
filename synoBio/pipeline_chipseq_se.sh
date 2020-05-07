@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 main(){
-    local SELF
+    #local SELF
     SELF=`readlink -f ${BASH_SOURCE[0]}`
     SELFALI=`basename ${SELF%.*}`
     local BASE=$PWD
@@ -14,12 +14,18 @@ main(){
     echo ==== Parse Input arguments
     {
     
-        local read1 read2 reads PAIRED NCORE
+        #local read1 read2 reads PAIRED NCORE
         NCORE=6
         PAIR=0
         source bb__argparse.sh "$@"
         shift "$((OPTIND-1))"
-        
+        export read1
+        export read2
+        export reads
+        export PAIRED
+        export NCORE
+        export SELF
+        export LOGFILE
         
         re='^[0-9]+$'
         if ! [[ $NCORE =~ $re ]] ; then
