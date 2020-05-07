@@ -40,6 +40,7 @@ bam2bigwig() {
     local ALI=${BAM%.bam}
     local FILEjson=${FILEjson:-FILEDefault.json}
     
+    #birte 05-2020: bamCoverage is a deepTools option, need to have deepTools installed and python3 as default
     local CMD="bamCoverage $ARGS --normalizeUsing $NORM \
       --smoothLength 10 --binSize 10 -p ${NCORE:-1}  \
       -b $BAM -o ${ALI}_${NORM}.bw"
