@@ -23,12 +23,6 @@ source /tmp/synoBio_src/init.sh
 source /tmp/myEnv/activate.sh
 ```
 
-- Source appropriate config file
-
-```sh
-source /tmp/myEnv/config_Ath_TAIR10.sh #example config
-```
-
 - Align your samples 
 
 ```sh
@@ -45,3 +39,11 @@ Have the following installed on your local computer:
 - Python 2.7 and Python 3.7 (Python 3.7 must be the default)
 - deepTools (3.4.3, for bamCoverage tool)
 - MACS2 (2.2.7.1, only for ChIP-Seq peak calling; pipeline_callpeak_inplace.sh)
+
+Have reference genome, indexed reference genome, annotation files (GTF, GFF), genome size file, adapter sequences saved to local folder and adjust paths accordingly in config.sh files. Before aligning actual samples:
+
+- Source appropriate config file
+
+```sh
+source /tmp/myEnv/config_Ath_TAIR10.sh #example config
+```
