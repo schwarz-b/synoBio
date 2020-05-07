@@ -4,7 +4,8 @@ import csv
 import sys
 
 f = csv.reader(sys.stdin, dialect="excel-tab")
-of = csv.writer(sys.stdout, dialect="excel-tab")
+#of = csv.writer(sys.stdout, dialect="excel-tab")
+of = csv.writer(sys.stdout, dialect="excel-tab", quotechar="'") #birte 05-2020: set ' to avoid error when copying .bam file @PG header
 last_read = None
 for line in f :
     #take care of the header
