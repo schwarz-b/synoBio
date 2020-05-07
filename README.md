@@ -23,6 +23,12 @@ source /tmp/synoBio_src/init.sh
 source /tmp/myEnv/activate.sh
 ```
 
+- Source appropriate config file
+
+```sh
+source /tmp/myEnv/config_Ath_TAIR10.sh #example config
+```
+
 - Align your samples 
 
 ```sh
