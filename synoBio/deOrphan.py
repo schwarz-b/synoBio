@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 ### Source: https://www.biostars.org/p/95929/#95933
 import csv
 import sys
