@@ -30,3 +30,12 @@ SRC=/tmp/synoBio_src
 mkdir -p ./temp_job; cd ./temp_job
 /tmp/myEnv/bin/pipeline_rnaseq.sh $SRC/examples/data/test_R1_.fastq $SRC/examples/data/test_R1_.fastq
 ```
+## Prerequisites
+
+The following software is added to the new environment. Have the software (versions used here are indicated) downloaded to a local folder and adjust paths accordingly in init.sh:
+- FastQC (2.1.1), Trimmomatic (0.39), HISAT2 (2.1.0, for pipeline_rnaseq.sh), Bowtie2 (2.4.1, for pipeline_chipseq_pe|se.sh), Samtools (1.10), Picard (2.22.1), StringTie (2.1.1)
+
+Have the following installed on your local computer:
+- Python 2.7 and Python 3.7 (Python 3.7 must be the default)
+- deepTools (3.4.3, for bamCoverage tool)
+- MACS2 (2.2.7.1, only for ChIP-Seq peak calling; pipeline_callpeak_inplace.sh)
