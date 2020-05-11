@@ -40,10 +40,27 @@ Have the following installed on your local computer:
 - deepTools (3.4.3, for bamCoverage tool)
 - MACS2 (2.2.7.1, only for ChIP-Seq peak calling; pipeline_callpeak_inplace.sh)
 
-Have reference genome, indexed reference genome, annotation files (GTF, GFF), genome size file, adapter sequences saved to local folder and adjust paths accordingly in config.sh files. Before aligning actual samples:
+Have reference genome, indexed reference genome, annotation files (GTF, GFF), genome size file, adapter sequences saved to local folder and adjust paths accordingly in config.sh files. 
+
+# Before aligning your actual samples:
 
 - Source appropriate config file
 
 ```sh
 source /tmp/myEnv/config_Ath_TAIR10.sh #example config
 ```
+
+## You can also directly align illumina output samples (4 lanes per flow cell):
+
+The following pipeline includes pre-processing of the illumina samples. It also writes the pipeline output into a defined directory.
+
+- Aligning illumina output samples
+
+```sh
+#example RNA-seq paired-end reads
+pipeline_mapper.sh -p -t 6 /path/to/input/dir pipeline_rnaseq.sh /path/to/output/dir #-p: paired end, -t 6: number of threads
+
+#example ChIP-seq paired-end reads
+pipeline_mapper.sh -p -t 6 /path/to/input/dir pipeline_chipseq_pe.sh /path/to/output/dir
+```
+*/path/to/input/dir: directory containing the .fastq(.gz) files to be processed (8 files for paired-end reads)
