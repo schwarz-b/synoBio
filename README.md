@@ -11,7 +11,7 @@ The two following components have been split since August 8th 2018 for modularit
 - Create a new environment:
 
 ```sh
-git clone https://github.com/shouldsee/synoBio /tmp/synoBio_src
+git clone https://github.com/schwarz-b/synoBio /tmp/synoBio_src
 mkdir /tmp/myEnv
 cd /tmp/myEnv
 source /tmp/synoBio_src/init.sh
