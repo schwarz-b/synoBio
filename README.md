@@ -42,7 +42,7 @@ Have the following installed on your local computer:
 
 Have reference genome, indexed reference genome, annotation files (GTF, GFF), genome size file, adapter sequences saved to local folder and adjust paths accordingly in config.sh files. 
 
-# Before aligning your actual samples:
+#### Before aligning your actual samples:
 
 - Source appropriate config file
 
